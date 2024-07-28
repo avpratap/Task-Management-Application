@@ -8,9 +8,32 @@ const Navbar = () => {
 
   return (
     <Flex as="nav" bg="blue.500" p={4} color="white">
-      <Box>
+      {/* <Box>
         <Link as={RouterLink} to="/dashboard" p={2}>Dashboard</Link>
-      </Box>
+      </Box> */}
+
+<Box
+      p={4}
+      bg="white"
+      borderRadius="md"
+      boxShadow="md"
+      _hover={{ bg: 'gray.100', boxShadow: 'lg' }}
+      transition="all 0.3s ease"
+    >
+      <Link
+        as={RouterLink}
+        to="/dashboard"
+        p={2}
+        fontSize="xl"
+        fontWeight="bold"
+        color="blue.500"
+        _hover={{ textDecoration: 'underline', color: 'blue.700' }}
+        _active={{ color: 'blue.800' }}
+        _focus={{ boxShadow: 'outline' }}
+      >
+        Task-Management-Application
+      </Link>
+    </Box>
       <Spacer />
       {isAuthenticated ? (
         <Button onClick={logout} colorScheme="red">Logout</Button>
