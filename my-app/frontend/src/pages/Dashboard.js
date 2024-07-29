@@ -3,15 +3,15 @@ import { Box, Button, Flex, useDisclosure } from '@chakra-ui/react';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton } from '@chakra-ui/react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import axios from 'axios';
-import { useAuth } from '../context/AuthContext';
-import Task from '../components/Task';
+// import { useAuth } from '../context/AuthContext';
+// import Task from '../components/Task';
 import Column from '../components/Column';
 import NewTaskForm from '../components/NewTaskForm';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState([]);
-  const { isAuthenticated } = useAuth();
+  // const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
