@@ -14,8 +14,8 @@ app.use('/api/tasks', taskRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.get("/", (req,res) => {
-  res.send("APi is running")
+app.get("/health", (req,res) => {
+  res.send("backend is running")
 });
 
 app.listen(PORT, () => {
