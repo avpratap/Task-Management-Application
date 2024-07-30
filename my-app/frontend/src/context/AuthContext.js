@@ -41,7 +41,11 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (name, email, password) => {
     console.log("request for a new registration from email: ", email);
-    await axios.post('/api/auth/register', { name, email, password });
+    try{
+      await axios.post('/api/auth/register', { name, email, password });
+    } catch(error){
+      console.error("error while registering for new user, error: ", error);
+    }
   };
 
   return (
