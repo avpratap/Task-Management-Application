@@ -7,12 +7,13 @@ const createUser = async (name, email, password) => {
     'INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *',
     [name, email, password]
   );
-  console.log("sucessfully created new user with email: ", email)
+  console.log("sucessfully created new user with email: ", email);
+  return result.rows[0];
 }
 catch(error){
   console.log("Exception while running ADD user query: ", error);
 }
-  return result.rows[0];
+return 0;
 };
 
 const getUserByEmail = async (email) => {
