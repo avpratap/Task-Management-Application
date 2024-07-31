@@ -12,6 +12,7 @@ const createUser = async (name, email, password) => {
 }
 catch(error){
   console.log("Exception while running ADD user query: ", error);
+  throw error;
 }
 return 0;
 };
