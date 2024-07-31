@@ -4,9 +4,11 @@ const generateToken = require('../utils/generateToken');
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
-  console.log("new registration for name:", name, "password", password);
+  console.log("new registration for email, password:", email, password);
 
   const hashedPassword = await bcrypt.hash(password, 10);
+  console.log("new registration for email, hashedpassword:", email, hashedPassword);
+
   const user = await createUser(name, email, hashedPassword);
   res.status(201).json({ message: 'User registered successfully' });
 };
