@@ -1,4 +1,4 @@
-const pool = require('pg');
+const Pool = require('pg');
 const bcrypt = require("bcryptjs");
 const { createUser, getUserByEmail } = require('../models/User');
 
