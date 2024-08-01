@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   
+    "scripts": {
+      "build": "[my-framework] build --output public"
+    },
+  
   "author": "Pratap Singh",
   "license": "ISC",
   "dependencies": {
