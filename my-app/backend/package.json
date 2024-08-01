@@ -2,10 +2,8 @@
   "name": "task-management-application",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "scripts": {
-    "start": "nodemon backend/server.js"
-  },
+  "main": "index.js",
+  
   "author": "Pratap Singh",
   "license": "ISC",
   "dependencies": {
